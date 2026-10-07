@@ -13,11 +13,11 @@ HƯỚNG DẪN - đọc rồi XÓA TOÀN BỘ các khối chú thích này sau k
 
 | | |
 |---|---|
-| Họ và tên | ___ |
-| MSSV | ___ |
-| Lớp / Khóa | K4 |
-| Repo GitHub | https://github.com/___/___ |
-| Ngày nộp | ___ |
+| Họ và tên | Nguyễn Ngọc Minh |
+| MSSV | 2A202602653 |
+| Lớp / Khóa | 3a / K4 |
+| Repo GitHub | https://github.com/NgNMinh/K4-L3-DAY21-NguyenNgocMinh-2A202602653-CI-CD-for-AI-Systems |
+| Ngày nộp | 07/10/2026 |
 
 ---
 
@@ -70,10 +70,10 @@ Cần nêu được:
 
 | | f1_score | accuracy |
 |---|---|---|
-| Bước 2 (chỉ `train_batch1`) | ___ | ___ |
-| Bước 3 (thêm `train_batch2`) | ___ | ___ |
+| Bước 2 (chỉ `train_batch1`) | 0.7149321267 | 0.874 |
+| Bước 3 (thêm `train_batch2`) | 0.7354260090 | 0.882 |
 
-**Nhận xét:** ___
+**Nhận xét:** Sau khi thêm `train_batch2`, F1 tăng từ 0.7149 lên 0.7354 (tăng khoảng 0.0205), còn accuracy tăng từ 0.874 lên 0.882 (tăng 0.008). Trên lần chạy này, mô hình cải thiện cả khả năng nhận diện lớp dương và độ chính xác tổng thể; kết quả thực nghiệm cho thấy dữ liệu bổ sung có ích, nhưng chưa đủ để kết luận mức cải thiện sẽ luôn lặp lại ở các lần chạy khác.
 
 <!--
 Một câu trả lời trung thực kiểu "f1 giảm 0,01 vì dữ liệu mới cùng phân phối, không mang
