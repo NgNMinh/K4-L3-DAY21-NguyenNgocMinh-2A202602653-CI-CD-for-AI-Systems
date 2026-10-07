@@ -23,25 +23,15 @@ HƯỚNG DẪN - đọc rồi XÓA TOÀN BỘ các khối chú thích này sau k
 
 ## 1. Bộ Siêu Tham Số Đã Chọn và Lý Do
 
-<!-- Khoảng 120 - 150 từ. Điền kết quả thật từ MLflow UI ở Bước 1, tối thiểu 3 lần chạy. -->
-
 | Lần chạy | n_estimators | learning_rate | max_depth | f1_score | accuracy |
-|---|---|---|---|---|---|
-| 1 | ___ | ___ | ___ | ___ | ___ |
-| 2 | ___ | ___ | ___ | ___ | ___ |
-| 3 | ___ | ___ | ___ | ___ | ___ |
+|---|---:|---:|---:|---:|---:|
+| 1 | 200 | 0.1 | 5 | 0.7149321267 | 0.874 |
+| 2 | 50 | 0.05 | 2 | 0.6051282051 | 0.846 |
+| 3 | 100 | 0.1 | 3 | 0.7109004739 | 0.878 |
 
-**Bộ siêu tham số đã chọn:** `n_estimators=___`, `learning_rate=___`, `max_depth=___`.
+**Bộ siêu tham số đã chọn:** `n_estimators=200`, `learning_rate=0.1`, `max_depth=5`.
 
-**Lý do:** ___
-
-<!--
-Trả lời trong phần Lý do:
-  - Vì sao bộ này tốt hơn các bộ còn lại (dựa trên f1_score, không phải accuracy)?
-  - Lần chạy có accuracy cao nhất có trùng với lần có f1_score cao nhất không?
-    Nếu không, điều đó nói lên điều gì?
-  - Bạn quan sát thấy đánh đổi nào giữa n_estimators và learning_rate?
--->
+**Lý do:** Em chọn lần chạy 1 vì có F1 cao nhất (0.7149), vượt lần chạy 3 (0.7109) và lần chạy 2 (0.6051). F1 phù hợp mục tiêu lab vì đo khả năng nhận diện lớp thu nhập trên 50K. Lần chạy 3 có accuracy cao nhất (0.878), nhưng F1 thấp hơn lần chạy 1 (0.7149; accuracy 0.874), cho thấy accuracy tổng thể không đảm bảo nhận diện lớp dương tốt nhất trên dữ liệu lệch lớp. So với lần chạy 2, lần chạy 1 tăng n_estimators từ 50 lên 200 và learning_rate từ 0.05 lên 0.1, đồng thời F1 tăng. Kết quả gợi ý cấu hình nhiều cây với learning_rate cao hơn hiệu quả trong các lần thử, nhưng max_depth cũng khác (2 và 5), nên chưa thể tách riêng tác động từng tham số. Lần chạy 3 có accuracy cao hơn nhưng F1 thấp hơn.
 
 ---
 
